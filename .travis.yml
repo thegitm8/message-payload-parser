@@ -5,10 +5,10 @@ node_js:
 dist: trusty
 
 script:
-    - nvm install 0.10
     - npm run lint
     - npm test
     - rm -rf node_modules/
+    - nvm install 0.10
     - nvm use 0.10
     - npm install
     - npm test
