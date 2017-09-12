@@ -1,0 +1,37 @@
+{
+  "name": "message-payload-parser",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/src/payload-parser.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "build:watch": "tsc-watch server.ts --outDir ./dist --onSuccess 'node ./dist/server.ts'",
+    "pretest": "npm run build",
+    "lint": "tslint --project .",
+    "test": "mocha dist/test/*-test.js",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w",
+    "preversion": "npm test",
+    "version": "npm run build && conventional-changelog -p angular -v -r 0 > CHANGELOG.md && git add -A .",
+    "postversion": "git push && git push --tags",
+    "prepublish": "not-in-install && npm run build || echo 'In install cycle, skipping prepublish'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/es6-shim": "^0.31.35",
+    "@types/mocha": "^2.2.43",
+    "chai": "^4.1.2",
+    "conventional-changelog": "^1.1.5",
+    "es6-shim": "^0.35.3",
+    "mocha": "^3.5.3",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2"
+  }
+}
