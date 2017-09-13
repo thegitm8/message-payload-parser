@@ -1,5 +1,5 @@
 
-interface Step {
+export interface Step {
     pos: number;
     step: State;
 }

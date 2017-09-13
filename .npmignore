@@ -1,0 +1,12 @@
+# untranspiled dirs
+src/
+test/
+
+# sourcemaps
+*.map
+
+# self
+*.tgz
+
+# CI
+.travis.yml

@@ -1,17 +1,17 @@
 import StreamScanner from './stream-scanner';
 
-interface Step {
+export interface Step {
     pos: number;
     step: State;
 }
 
-interface StringPos {
+export interface StringPos {
     start?: number;
     end?: number;
     str: string;
 }
 
-class FragBuffer {
+export class FragBuffer {
     public frags: StringPos[] = null;
     public match: string;
     constructor(match: string) {

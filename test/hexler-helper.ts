@@ -1,7 +1,7 @@
 
 import { Map } from 'es6-shim';
 
-interface Hexle {
+export interface Hexle {
   findCount: number;
   payload: string[];
   hexle: string[][];

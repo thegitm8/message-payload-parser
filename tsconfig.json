@@ -4,6 +4,7 @@
     "module": "commonjs",
     "outDir": "dist",
     "noImplicitAny": true,
+    "declaration": true,
     "pretty": true,
     "jsx": "react",
     "experimentalDecorators": true,
