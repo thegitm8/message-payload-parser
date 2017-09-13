@@ -1,7 +1,7 @@
 {
   "name": "message-payload-parser",
   "version": "0.1.1",
-  "description": "",
+  "description": "A stream based message payload parser.",
   "main": "dist/src/payload-parser.js",
   "types": "dist/src/payload-parser.d.ts",
   "directories": {
@@ -22,7 +22,11 @@
     "prepare": "not-in-install && npm run build || echo 'In install cycle, skipping prepublish'"
   },
   "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "thegitm8/message-payload-parser"
+  },
+  "license": "AFL-2.0",
   "devDependencies": {
     "@types/chai": "^4.0.4",
     "@types/es6-shim": "^0.31.35",
